@@ -1,4 +1,4 @@
-#include <opencv2/opencv.hpp> 
+#include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace std;
@@ -6,7 +6,13 @@ using namespace cv;
 
 int main()
 {
-    Mat image = imread("RedApple.png");
+    Mat image = imread("RedApple.bmp");
+
+    if (image.empty()) {
+        cerr << "Error: Could not read image file" << endl;
+        return -1;
+    }
+
     Mat image_HSV, image_RED, image_BLUE, image_GREEN;
     GaussianBlur(image, image, Size(11,11),0);
 
