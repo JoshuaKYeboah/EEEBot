@@ -19,7 +19,7 @@ int main()
     cvtColor(image, image_HSV, COLOR_BGR2HSV); // Convert the image to HSV
     inRange(image_HSV, Scalar(0,70,50), Scalar(19,255,255), image_RED); // red
     inRange(image_HSV, Scalar(78, 150, 50), Scalar(120, 255, 255), image_BLUE); // blue
-    inRange(image_HSV, Scalar(35,50,50), Scalar (75,255,255), image_GREEN); // green
+    inRange(image_HSV, Scalar(38,50,50), Scalar (75,255,255), image_GREEN); // green
 
     // count pixels
     int redPixels = countNonZero(image_RED);
